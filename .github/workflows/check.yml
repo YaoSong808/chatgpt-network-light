@@ -1,0 +1,20 @@
+name: 构建与测试
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    name: macOS 状态判断测试与应用构建
+    runs-on: macos-latest
+    steps:
+      - name: 检出源码
+        uses: actions/checkout@v4
+      - name: 运行状态判断测试
+        run: ./test.command
+      - name: 构建应用
+        run: ./build.command
