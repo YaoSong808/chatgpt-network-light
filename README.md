@@ -1,6 +1,6 @@
 # ChatGPT 网络灯
 
-<img src="Assets/AppIcon.png" alt="应用图标：深灰圆角方块中的薄荷绿色网络灯" width="128">
+<img src="Assets/AppIcon.png" alt="应用图标：珍珠白底上的翡翠绿对话气泡与无线网络标志" width="128">
 
 一个轻量的 macOS 菜单栏小工具。看一眼右上角的灯，就知道当前网络能不能连上 ChatGPT 官网。
 
@@ -108,7 +108,7 @@ Sources/
 Tests/
   ClassifierTests.swift     状态判断测试
 Assets/                     应用图标及多尺寸资源
-scripts/generate-icon.swift 用 macOS 绘图接口生成图标
+scripts/generate-icon.swift 从图标原稿生成 macOS 多尺寸资源
 docs/images/                实际使用截图
 build.command               构建应用
 test.command                运行测试
