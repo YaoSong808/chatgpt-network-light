@@ -6,6 +6,7 @@ mkdir -p "$destination"
 destination="${destination:A}"
 app="$destination/ChatGPT网络灯.app"
 mkdir -p "$app/Contents/MacOS" "$app/Contents/Resources"
+cp Assets/AppIcon.icns "$app/Contents/Resources/AppIcon.icns"
 xcrun swiftc -swift-version 5 -O -target arm64-apple-macosx13.0 \
   -framework AppKit -framework SwiftUI -framework Network -framework SystemConfiguration \
   Sources/Probe.swift Sources/App.swift Sources/main.swift -o "$app/Contents/MacOS/ChatGPTNetworkLight"
@@ -18,8 +19,9 @@ cat > "$app/Contents/Info.plist" <<'PLIST'
 <key>CFBundleName</key><string>ChatGPT网络灯</string>
 <key>CFBundleDisplayName</key><string>ChatGPT网络灯</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>1.2.0</string>
-<key>CFBundleVersion</key><string>4</string>
+<key>CFBundleIconFile</key><string>AppIcon</string>
+<key>CFBundleShortVersionString</key><string>1.2.1</string>
+<key>CFBundleVersion</key><string>5</string>
 <key>LSMinimumSystemVersion</key><string>13.0</string>
 <key>LSUIElement</key><true/>
 <key>NSHighResolutionCapable</key><true/>
